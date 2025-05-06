@@ -14,10 +14,6 @@ header {
 a {
     color: rgb(0, 217, 255);
 }
-.scroll {
-    height: 200px; 
-    overflow-y: scroll;
-}
 .imageLayout {
     margin-top: 30px;
     display: grid;
