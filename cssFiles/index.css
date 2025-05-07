@@ -20,14 +20,33 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
 }
-
-.imageLayoutItem p {
+.carContainer {
+    width: 300px;
     text-align: center;
-    font-size: 35px;
 }
-
-.imageLayoutItem img {
-    width: 100%;
+.carImage {
+    width: 400px;
+    height: 275px;
+    border: 2px solid #000000; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.carBrand {
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.book-now {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    background-color:  #001f61;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
 }
 .book {
     color: black;
