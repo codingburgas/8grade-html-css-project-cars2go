@@ -1,8 +1,7 @@
 <h1 align="center">Cars2Go - Rent easy & safe</h1>
 
 <p align="center">
-  <img src="../media/8grade-html-css-project-cars2go/media/IMG_20250420_211540.jpg"/>
-</p>
+  <img src="https://github.com/codingburgas/8grade-html-css-project-cars2go/tree/main/media
 
 <br>
 
