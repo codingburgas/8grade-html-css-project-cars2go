@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports Cars | Cars2Go</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/sports.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+  <header class="hero" style="background-image: url('../media/sports.jpg');">
+   <nav class="main-nav nav-card">
+  <div class="nav-logo-box">
+    <img src="../media/cars2go-logo.jpg" alt="Cars2Go Logo" class="nav-logo" />
+  </div>
+  <ul id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../html/about.html">About Us</a></li>
+        <li><a href="../html/contact.html">Contact</a></li>
+        <li id="auth-link"><a href="../html/login.html">Login</a></li>
+      </ul>
+</nav>
+
+    <div class="overlay">
+      <h1>Sports Collection</h1>
+      <p>Experience the thrill of high-performance driving.</p>
+    </div>
+  </header>
+
+  <section class="car-categories">
+    <h2>Book a Sports Car</h2>
+
+    <!-- Lamborghini -->
+    <div class="reservation-card">
+      <img src="../media/lamborghini.jpg" alt="Laborghini Huracan">
+      <div class="car-info">
+        <h3>Laborghini Huracan</h3>
+        <p>Iconic design meets exhilarating performance.</p>
+
+        <label for="currency1">Currency:</label>
+        <select id="currency1" onchange="updatePrices(1, 200)">
+          <option value="EUR">€ EUR</option>
+          <option value="USD">$ USD</option>
+          <option value="BGN">лв BGN</option>
+        </select>
+        <p><strong id="priceDisplay1">€200/day</strong></p>
+
+        <form class="reservation-form" oninput="calculateTotal(1, 200)">
+          <label for="start1">Pick-up Date:</label>
+          <input type="text" id="start1" required>
+          <label for="end1">Return Date:</label>
+          <input type="text" id="end1" required>
+          <label>Total Price:</label>
+          <output id="total1">€0</output>
+          <button type="submit" class="btn">Reserve Now</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Ferrari -->
+    <div class="reservation-card">
+      <img src="../media/ferrari.jpg" alt="Ferrari Roma">
+      <div class="car-info">
+        <h3>Ferrari Roma</h3>
+        <p>Unparalleled speed and Italian craftsmanship.</p>
+
+        <label for="currency2">Currency:</label>
+        <select id="currency2" onchange="updatePrices(2, 220)">
+          <option value="EUR">€ EUR</option>
+          <option value="USD">$ USD</option>
+          <option value="BGN">лв BGN</option>
+        </select>
+        <p><strong id="priceDisplay2">€220/day</strong></p>
+
+        <form class="reservation-form" oninput="calculateTotal(2, 220)">
+          <label for="start2">Pick-up Date:</label>
+          <input type="text" id="start2" required>
+          <label for="end2">Return Date:</label>
+          <input type="text" id="end2" required>
+          <label>Total Price:</label>
+          <output id="total2">€0</output>
+          <button type="submit" class="btn">Reserve Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-copy">&copy; 2025 Cars2Go. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("#start1", { dateFormat: "Y-m-d" });
+    flatpickr("#end1", { dateFormat: "Y-m-d" });
+    flatpickr("#start2", { dateFormat: "Y-m-d" });
+    flatpickr("#end2", { dateFormat: "Y-m-d" });
+
+    const conversionRates = { EUR: 1, USD: 1.08, BGN: 1.95 };
+
+    function getSymbol(currency) {
+      return currency === "USD" ? "$" : currency === "BGN" ? "лв" : "€";
+    }
+
+    function updatePrices(carId, baseRate) {
+      const currency = document.getElementById(`currency${carId}`).value;
+      const rate = conversionRates[currency];
+      const converted = (baseRate * rate).toFixed(2);
+      const symbol = getSymbol(currency);
+      document.getElementById(`priceDisplay${carId}`).textContent = `${symbol}${converted}/day`;
+      calculateTotal(carId, baseRate);
+    }
+
+    function calculateTotal(carId, baseRate) {
+      const start = new Date(document.getElementById(`start${carId}`).value);
+      const end = new Date(document.getElementById(`end${carId}`).value);
+      const currency = document.getElementById(`currency${carId}`).value;
+      const days = (end - start) / (1000 * 60 * 60 * 24);
+      const symbol = getSymbol(currency);
+      const rate = conversionRates[currency];
+      const total = days > 0 ? (baseRate * days * rate).toFixed(2) : 0;
+      document.getElementById(`total${carId}`).textContent = `${symbol}${total}`;
+    }
+
+    updatePrices(1, 200);
+    updatePrices(2, 220);
+
+    const authLink = document.getElementById("auth-link");
+  const isLoggedIn = localStorage.getItem("cars2go_loggedin") === "true";
+
+  if (isLoggedIn) {
+    authLink.innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+  }
+
+  function logout() {
+    localStorage.removeItem("cars2go_loggedin");
+    window.location.reload();
+  }
+  </script>
+</body>
+</html>
