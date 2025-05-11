@@ -61,5 +61,9 @@ a {
 }
 
 .loginForm button:hover {
-     background-color: #172554;
+     background-color: #001f61;
+}
+#a1 {
+    color: black;
+    font-family: Arial, sans-serif;
 }
