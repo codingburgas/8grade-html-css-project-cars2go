@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D1B2A;
+  color: #f5f5f5;
+}
+
+.hero {
+  background: url('../media/luxury.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #61E8E1;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.btn {
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  background: #61E8E1;
+  color: #0D1B2A;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #4ed0cc;
+}
+
+.main-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #61E8E1;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.main-nav a:hover {
+  color: white;
+}
+
+.nav-logo {
+  height: 150px;
+}
+
+.car-categories {
+  padding: 4em 2em;
+  text-align: center;
+  background: #102238;
+}
+
+.car-categories h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #61E8E1;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #61E8E1;
+  margin: 0.5em 0;
+  font-size: 1.2rem;
+}
+
+.card p {
+  padding: 0 1em 1em;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.footer {
+  background: #0D1B2A;
+  text-align: center;
+  padding: 2em 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.nav-card {
+  background: rgba(0, 0, 0, 0.55); /* Darker tone */
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-logo {
+  height: 150px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  color: #61E8E1;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+  color: #61E8E1;
+}
+
+/* Login Form Styling */
+.login-section {
+  padding: 4em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  max-width: 400px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 2em;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.login-form label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  color: #f9e79f;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 1em;
+  background: #f9e79f;
+  color: #0a0a0a;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form .btn:hover {
+  background: #e0c873;
+}
