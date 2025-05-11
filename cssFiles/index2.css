@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #001f61;
+    color: rgb(0, 217, 255);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+a {
+    color: rgb(0, 217, 255);
+}
+.imageLayout {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+.carContainer {
+    width: 300px;
+    text-align: center;
+}
+.carImage {
+    width: 400px;
+    height: 275px;
+    border: 2px solid #000000; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.carBrand {
+    color: #ffffff; 
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.bookNow {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    background-color:  #001f61;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.book {
+    color: black;
+}
+footer {
+    background-color: #001f61;
+    color: rgb(0, 217, 255);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
