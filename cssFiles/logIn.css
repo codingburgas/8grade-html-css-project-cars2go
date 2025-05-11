@@ -18,13 +18,48 @@ footer {
     padding: 2rem;
     text-align: center;
     border-bottom: 1px solid #ddd;
+}    
+a {
+    color: rgb(0, 217, 255);
 }
-.loginButton {
-    background-color: #001f61; 
-    color: white; 
-    padding: 10px 20px; 
-    border: none; 
-    border-radius: 5px;
-    cursor: pointer; 
+.loginForm {
+    width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.loginForm h2 {
+    text-align: center;
+    color: #333;
+}
+
+.loginForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.loginForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E3A8A;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     font-size: 16px;
+}
+
+.loginForm button:hover {
+     background-color: #172554;
 }
