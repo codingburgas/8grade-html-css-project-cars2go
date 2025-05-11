@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0D1B2A;
+  color: #f5f5f5;
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #61E8E1;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.main-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+}
+
+.main-nav a {
+  color: #61E8E1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  color: #ffffff;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+.about-section {
+  max-width: 800px;
+  margin: auto;
+  padding: 4em 2em;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-top: 2em;
+  color: #61E8E1;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1em;
+  text-align: left;
+}
+
+.about-section li {
+  margin-bottom: 0.5em;
+}
+
+.footer {
+  background: #0D1B2A;
+  text-align: center;
+  padding: 2em 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.nav-card {
+  background: rgba(0, 0, 0, 0.55); /* Darker tone */
+  padding: 1em 2em;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.nav-logo {
+  height: 150px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav li a {
+  color: #61E8E1;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+  color: #61E8E1;
+}
