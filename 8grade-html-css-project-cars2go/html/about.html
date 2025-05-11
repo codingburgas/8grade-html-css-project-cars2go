@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Cars2Go</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/about.css" />
+</head>
+<body>
+  <header class="hero" style="background-image: url('../media/about.png');">
+    <nav class="main-nav nav-card">
+  <div class="nav-logo-box">
+    <img src="../media/cars2go-logo.jpg" alt="Cars2Go Logo" class="nav-logo" />
+  </div>
+  <ul id="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../html/about.html">About Us</a></li>
+    <li><a href="../html/contact.html">Contact</a></li>
+    <li id="auth-link"><a href="../html/login.html">Login</a></li>
+  </ul>
+</nav>
+    <div class="overlay">
+      <h1>About Cars2Go</h1>
+      <p>Driven by innovation, built for convenience.</p>
+    </div>
+  </header>
+
+  <section class="about-section">
+    <h2>Our Mission</h2>
+    <p>
+      At Cars2Go, we redefine car rentals with a tech-savvy, luxury-driven experience. Our goal is to make renting premium vehicles as seamless and delightful as driving them.
+    </p>
+
+    <h2>Why Choose Cars2Go?</h2>
+    <ul>
+      <li>✔️ Fully curated luxury fleet</li>
+      <li>✔️ Transparent pricing & flexible reservations</li>
+      <li>✔️ Easy booking with real-time availability</li>
+      <li>✔️ 24/7 customer support</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p class="footer-copy">&copy; 2025 Cars2Go. All rights reserved.</p>
+    </footer>
+<script>
+const authLink = document.getElementById("auth-link");
+  const isLoggedIn = localStorage.getItem("cars2go_loggedin") === "true";
+
+  if (isLoggedIn) {
+    authLink.innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+  }
+
+  function logout() {
+    localStorage.removeItem("cars2go_loggedin");
+    window.location.reload();
+  }
+</script>
+</body>
+</html>
